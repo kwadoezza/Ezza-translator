@@ -1,22 +1,22 @@
-# Ezza Translator AI
+# Ezza Translator AI ✨🌍
 
 *Ezza Translator AI* is a simple and powerful web app that translates English text into the Ezza language using artificial intelligence. Built with Python and Streamlit, this tool helps preserve and promote the Ezza language through accessible technology.
 
-## Features
+## Features 🚀
 
 - Translate English to Ezza with the help of AI
 - Clean and easy-to-use interface
 - Powered by OpenAI's GPT API
 - Lightweight and runs locally with Streamlit
 
-## Demo
+## Demo 💻
 
 To launch the app locally:
 
 ```bash
 streamlit run ezza_translator.py
 
-Installation
+Installation 🔆
 
 	1.	Clone the repository:
 
@@ -34,13 +34,13 @@ pip install -r requirements.txt
 
 streamlit run ezza_translator.py
 
-Requirements
+Requirements 🔰
 
 	•	Python 3.8+
 	•	Streamlit
 	•	OpenAI API key
 
-Setup
+Setup 🔐
 
 Make sure to set your OpenAI API key as an environment variable:
 
@@ -52,11 +52,11 @@ On Windows (Command Prompt):
 
 set OPENAI_API_KEY=your-api-key
 
-License
+License ©
 
 This project is licensed under the MIT License.
 
-Acknowledgments
+Acknowledgments 🙏
 
 	•	Inspired by the need to preserve and promote the Ezza language
 	•	Built with Streamlit and OpenAI’s GPT API
