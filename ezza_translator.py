@@ -3,11 +3,11 @@ import openai
 from dotenv import load_dotenv
 import os
 
-# Load the API key from .env file
+# Load API key from .env
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Set the API key for OpenAI (correct usage)
+# Configure OpenAI with the new method
 openai.api_key = api_key
 
 # Streamlit App UI
