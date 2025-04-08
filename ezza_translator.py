@@ -5,10 +5,7 @@ import os
 
 # Load the API key from .env file
 load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-
-# Set up OpenAI client for SDK v1+
-client = openai.OpenAI(api_key=api_key)
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Streamlit App UI
 st.set_page_config(page_title="Ezza Language Translator", page_icon="🌍")
@@ -25,7 +22,7 @@ if st.button("Translate"):
     else:
         with st.spinner("Translating..."):
             try:
-                response = client.chat.completions.create(
+                response = openai.chat.completions.create(
                     model="gpt-4o",
                     messages=[
                         {"role": "system", "content": "You are a helpful translator that translates English to Ezza language."},
@@ -39,4 +36,4 @@ if st.button("Translate"):
                 st.markdown("Ezza Translation:")
                 st.text_area("Output:", ezza_translation, height=200)
             except Exception as e:
-                st.error(f"Translation failed: {e}")
+                st.error(f"Translation failed: {e}")
