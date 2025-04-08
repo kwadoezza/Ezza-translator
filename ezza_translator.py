@@ -3,11 +3,11 @@ import openai
 from dotenv import load_dotenv
 import os
 
-# Load API key from .env
+# Load the API key from .env file
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Configure OpenAI with the new method
+# Set OpenAI API key
 openai.api_key = api_key
 
 # Streamlit App UI
@@ -26,7 +26,7 @@ if st.button("Translate"):
         with st.spinner("Translating..."):
             try:
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model="gpt-4o",
                     messages=[
                         {"role": "system", "content": "You are a helpful translator that translates English to Ezza language."},
                         {"role": "user", "content": f"Translate the following into Ezza:\n{english_text}"}
@@ -39,4 +39,4 @@ if st.button("Translate"):
                 st.markdown("Ezza Translation:")
                 st.text_area("Output:", ezza_translation, height=200)
             except Exception as e:
-                st.error(f"Translation failed: {e}")
+                st.error(f"Translation failed: {e}")
